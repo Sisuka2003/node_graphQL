@@ -1,0 +1,27 @@
+{
+  "name": "node_graphql",
+  "version": "1.0.0",
+  "description": "Implementing graphQL with Node JS , ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sisuka2003/node_graphQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sisuka2003/node_graphQL/issues"
+  },
+  "homepage": "https://github.com/Sisuka2003/node_graphQL#readme",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.10.0",
+    "nodemon": "^3.1.9"
+  }
+}
