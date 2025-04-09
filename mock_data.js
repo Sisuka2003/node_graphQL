@@ -3,28 +3,28 @@ const mockDataList =[
         id:"1",
         name:"Sisuka Weerasinghe",
         age:21,
-        nationality:"Sri Lankan",
+        nationality:"SRI LANKA",
         username:"sisukaw"
     },
     {
         id:"2",
         name:"Gayan gamage",
         age:32,
-        nationality:"Sri Lankan",
+        nationality:"SRI LANKA",
         username:"gayyag"
     },
     {
         id:"3",
         name:"Ayomal Udayasiri",
         age:56,
-        nationality:"Indonesian",
+        nationality:"INDONESIA",
         username:"udaya@ayo"
     },
     {
         id:"4",
         name:"Vanikara raveindu jayasekara",
         age:13,
-        nationality:"American",
+        nationality:"AMERICA",
         username:"jay"
     }
 ]
