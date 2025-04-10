@@ -30,9 +30,28 @@ const resolvers ={
         }
     },
 
-    User:{
-        age:()=>{
-            return userMockDataList.find(user => user.age >= 10 && user.age <=40);
+    Mutation:{
+        createUser:(parent,args)=>{
+                const user =args.input
+                console.log(user);
+                let lastId = userMockDataList[userMockDataList.length-1].id;
+                user.id = ++lastId;
+                userMockDataList.push(user);
+                return user;
+        },
+        updateUsername:(parent,args)=>{
+            const {id,newUsername,previousUsername} = args.input
+            let updatedUserRecord;
+            userMockDataList.forEach((user)=>{
+                if(user.id === id && user.username === previousUsername){
+                    console.log("User updated")
+                    user.username =newUsername
+                    updatedUserRecord =user;
+                }
+            });
+
+            return updatedUserRecord;
+
         }
     }
 }
