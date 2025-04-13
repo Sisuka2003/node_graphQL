@@ -9,7 +9,9 @@ const resolvers ={
         users(){                          // can define the resolver as user() or user:()=> 
             return userMockDataList;
         },
-        userById:(parent,args)=>{
+        userById:(parent,args,context)=>{
+            console.log(context)
+            console.log(context.req.headers)
             const id = args.id
             return userMockDataList.find(user => user.id ==id);
         },
