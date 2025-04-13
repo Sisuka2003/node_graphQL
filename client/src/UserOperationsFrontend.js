@@ -14,18 +14,26 @@ const QUERY_ALL_USERS = gql`
     }
 `;
 
+const FIND_FROM_USER_ID_WITH_FRAGMENTS = gql`
+   fragment GetUserDetailsWhenFindById on User{
+        id
+        name
+        nationality
+        age
+        username
+   }
+`;
 
 const QUERY_USER_BY_ID = gql`
     query GetUserById($id: ID!){
         userById(id: $id){
-          id
-          name
-          nationality
-          age
-          username
+          ...GetUserDetailsWhenFindById
         }
     }
+    ${FIND_FROM_USER_ID_WITH_FRAGMENTS}
 `;
+
+
 
 
 const ADD_NEW_USER = gql`
