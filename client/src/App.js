@@ -1,6 +1,6 @@
 import './App.css';
 import {ApolloClient,InMemoryCache,ApolloProvider,useQuery} from "@apollo/client"
-import DisplayUserData from "./DisplayUserData"
+import UserOperations from "./UserOperationsFrontend"
 import { DisplayMovieData } from "./DisplayMovieData"
 
 
@@ -20,12 +20,14 @@ function App() {
   return (
     <ApolloProvider client={apolloClient}>
       <div className="App">
-        <h1>List of users</h1>
-          <DisplayUserData></DisplayUserData>
+        <p>==================================================================================</p>
+        <h1>User Operations----------//</h1>
+          <UserOperations></UserOperations>
           <br/>
           <br/>
           <br/>
-        <h1>List of movies</h1>
+        <p>==================================================================================</p>
+        <h1>Movie Operations----------//</h1>
           <DisplayMovieData></DisplayMovieData>
 
       </div>
