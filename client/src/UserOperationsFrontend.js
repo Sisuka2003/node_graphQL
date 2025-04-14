@@ -28,7 +28,7 @@ const QUERY_USER_BY_ID = gql`
     query GetUserById($id: ID!){
         userById(id: $id){
           ...GetUserDetailsWhenFindById
-        }
+         }
     }
     ${FIND_FROM_USER_ID_WITH_FRAGMENTS}
 `;
@@ -69,7 +69,7 @@ function UserOperations(){
     const [nationality, nationalityVal] =useState("");
     const [addNewUserMutation] = useMutation(ADD_NEW_USER);
 
-
+    console.log("Wada allima -> awurudu 2025")
 //-----------------------------------------------------------------------------
     
     
